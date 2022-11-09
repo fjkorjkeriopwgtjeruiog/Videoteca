@@ -1,9 +1,5 @@
 package com.mycompany.videoteca;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class Videoteca{
 
     public static void main(String[] args){
@@ -18,21 +14,13 @@ public class Videoteca{
         
         String ruta="juego.txt";
         
-        try{
-        FileWriter f=new FileWriter(ruta);
-        f.write(m64.getRank()+"\n");
-        f.write(m64.getNombre());
-        f.write(m64.getPlataforma().toString());
-        f.write(m64.getAnnosalida());
-        f.write(m64.getGenero().toString());
-        f.write(m64.getPublisher());
-        f.close();
+        m64.setAnnosalida(1996);
         
-        FileReader l=new FileReader(ruta);
-        System.out.println();
-        l.close();
-        }catch (IOException e){
-            System.out.println("Error");
-	}
+        System.out.println("Guardado");
+        m64.guardar(ruta);
+        
+        System.out.println("Lectura");
+        Juego trio=new Juego(ruta);
+        System.out.println(trio);
     }
 }
