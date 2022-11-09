@@ -4,9 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-import excepciones.StockException;
 import model.Juego;
-import modelo.Producto;
 public class ColeccionJuegos {
 
 	private Map<Integer, Juego> coleccion;
@@ -41,7 +39,7 @@ public class ColeccionJuegos {
         }
     }
     
-    public boolean AddProducto(int codigo, Juego j) {
+    public boolean AddProducto(int codigo, Juego j) throws Exception {
         if (coleccion.containsKey(codigo)) {
         	System.out.println("m1");
         	throw new Exception("No se puede guardar el juego. El codigo esta repetido.");        	
@@ -55,11 +53,11 @@ public class ColeccionJuegos {
         return coleccion.containsKey(cod);
     }
 
-    public void eliminarProducto(int cod) {
+    public void eliminarJuego(int cod) {
     	coleccion.remove(cod);
     }
 
-    public boolean CantidadesProducto(int cod) {
+    public boolean CantidadesJuego(int cod) throws Exception {
         if (coleccion.isEmpty()) {
         	//1 es Nivel severo. Es un error
         	throw new Exception("No hay stock.");
