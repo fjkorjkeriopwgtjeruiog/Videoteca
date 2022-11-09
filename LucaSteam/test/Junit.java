@@ -3,7 +3,6 @@ package test;
 import org.junit.jupiter.api.Test;
 
 public class Junit {
-	
 	Plataforma tri=Plataforma.n64;
     Genero mario=Genero.plataformas;
     
@@ -23,5 +22,4 @@ public class Junit {
     System.out.println("Lectura");
     Juego trio=new Juego(ruta);
     System.out.println(trio);
-
 }

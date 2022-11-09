@@ -5,8 +5,21 @@ import model.Juego;
 import model.Juego;
 import utils.Entrada;
 
+/**
+ * ColeccionJuegos 
+ * @author  Ivan
+ * @version 1.0
+ * 09-11-2022
+ */
+
 public class ColeccionJuegos {
 
+	/**
+	 * ColeccionJuegos / Saca el menu principal
+	 * @author  Ivan
+	 * @version 1.0
+	 * 09-11-2022
+	 */
 	public static void menu () {
 		boolean continuar = false; //posibilidad de salir del loop
 		do {	
@@ -25,7 +38,12 @@ public class ColeccionJuegos {
 		} while (continuar);
 	}
 
-
+	/**
+	 * ColeccionJuegos / llama al metodo en servicios
+	 * @author  Ivan
+	 * @version 1.0
+	 * 09-11-2022
+	 */
 	public static void nuevojuego(Juego juego) {
 		services.ColeccionJuegos.CrearJuego(juego);
 	}
