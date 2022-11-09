@@ -1,5 +1,9 @@
 package model;
 
-public enum Plataformas {
-
+public enum Plataformas{
+	atari2600,jaguar,
+    nes,snes,n64,gamecube,wii,
+    playstation,ps2,ps3,
+    mastersystem,megadrive,saturn,dreamcast,
+    xbox,xbox360;
 }
