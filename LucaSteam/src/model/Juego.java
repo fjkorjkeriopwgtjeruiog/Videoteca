@@ -6,7 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * guardar / guarda los datos de un juego en un fichero
+ * guardar / guarda los datos de un juego en un fichero. Debes dar la ruta del fichero donde guardarás los datos.
  * @author  Daniel
  * @version 1.0
  * 09-11-2022
