@@ -2,7 +2,7 @@ package test;
 
 import org.junit.jupiter.api.Test;
 
-public class Junit {
+public class Junit{
 	Plataforma tri=Plataforma.n64;
     Genero mario=Genero.plataformas;
     
