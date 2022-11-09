@@ -1,4 +1,5 @@
 package control;
+import utils.Entrada;
 
 public class ColeccionJuegos {
 
