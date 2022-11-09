@@ -22,6 +22,12 @@ public class Juego {
 		this.genero = genero;
 		this.publisher = publisher;
 	}
+	
+	public void crearJuego() {
+		
+    }
+	
+	
 	public String toString() {
 		return "Juego [rank=" + rank + ", nombre=" + nombre + ", plataforma="
 				+ plataforma + ", annosalida=" + annosalida + ", genero="

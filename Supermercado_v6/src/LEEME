@@ -1,0 +1,20 @@
+VERSION V6
+
+- Uso interfaces
+- Excepciones personalizadas (esbozadas posibilidades)
+- Incluido Logger
+
+MEJORAS
+- Lo logico seria sacar el stock fuera de producto
+- Metodos estáticos serializar/codigoAutomatico...
+- Sistema de logger. Incluir acciones a acometer en caso de Error.SEVERE
+- Ampliar y meter mas tipos  de excepciones personalizadas
+- Quitar casos de prueba y ponerlos parte >> concepto de testing
+
+ULTRA.MEJORAS
+- Emplear Lombok
+https://projectlombok.org/features/log
+- Usar BBDD para el stock
+- Usar un CRUD para el stock. Puedes usar esta referencia
+https://www.ecodeup.com/crud-java-manual-completo/
+
