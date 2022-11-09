@@ -25,6 +25,7 @@ public class Juego{
 				+ plataforma + ", annosalida=" + annosalida + ", genero="
 				+ genero + ", publisher=" + publisher + "]";
 	}
+        
 	public int getRank() {
 		return rank;
 	}
