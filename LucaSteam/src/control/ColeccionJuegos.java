@@ -45,8 +45,7 @@ public class ColeccionJuegos {
 	 * 09-11-2022
 	 */
 	public static void nuevojuego(Juego juego) {
-		services.ColeccionJuegos.AddJuego(juego);
-
+		services.ColeccionJuegos.CrearJuego(juego);
 	}
 
 
