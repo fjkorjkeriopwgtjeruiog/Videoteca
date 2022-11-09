@@ -9,6 +9,6 @@ package services;
 
 public class CSV {
 	public static void cargaInicialdeDatos() {
-		data.CSV.buildGameCollectionFromCSVFile();
+		data.CSV.buildGameCollectionFromCSVFile("vgsales.csv");
 	}
 }
