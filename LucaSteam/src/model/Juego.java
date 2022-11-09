@@ -44,6 +44,7 @@ public class Juego {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 	public Plataformas getPlataforma() {
 		return plataforma;
 	}
@@ -56,6 +57,7 @@ public class Juego {
 	public void setAnnosalida(int annosalida) {
 		this.annosalida = annosalida;
 	}
+
 	public Generos getGenero() {
 		return genero;
 	}
