@@ -17,9 +17,9 @@ import java.io.IOException;
  */
 
 public class CSV {
-	public static void buildGameCollectionFromCSVFile() {
+	public static void buildGameCollectionFromCSVFile(String filepath) {
 		try {
-			FileReader fr = new FileReader(new File("vgsales.csv"));
+			FileReader fr = new FileReader(new File(filepath));
 			BufferedReader br = new BufferedReader(fr);
 			
 			br.readLine(); // La primera linea son las cabeceras
@@ -42,7 +42,6 @@ public class CSV {
 				String publisher = cosas[5];
 				
 				Juego juego = new Juego(rank, nombre, plataforma, annosalida, genero, publisher);
-				//System.out.println(juego);
 				
 				control.ColeccionJuegos.nuevojuego(juego);
 				
@@ -51,10 +50,9 @@ public class CSV {
 			
 			
 		} catch (FileNotFoundException ex) {
-			System.out.println("Archivo no encontrado");
-			ex.printStackTrace();
+			utils.Logging.Log("Archivo no encontrado");
 		} catch (IOException ex){
-			ex.printStackTrace();
+			utils.Logging.Log("Problema de fichero");
 		}
 		
 	}
