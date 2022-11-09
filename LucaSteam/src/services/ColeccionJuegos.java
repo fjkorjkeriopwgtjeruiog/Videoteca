@@ -4,7 +4,7 @@ import model.Juego;
 
 public class ColeccionJuegos {
 
-	private services.ColeccionJuegos coleccion = new services.ColeccionJuegos();
+	private data.ColeccionJuegos coleccion = new data.ColeccionJuegos();
 
 	public boolean AddJuego(Juego j) throws StockException {
         
