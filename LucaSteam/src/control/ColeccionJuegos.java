@@ -1,5 +1,8 @@
 package control;
 
+import model.Juego;
+import utils.Entrada;
+
 public class ColeccionJuegos {
 
 	public static void menu () {
@@ -13,7 +16,6 @@ public class ColeccionJuegos {
 		if (opcion==1) {
 			control.CSV.cargaInicialdeDatos();
 			opcion1activa= true;
-			
 		}
 		
 		//otras opciones
@@ -22,7 +24,7 @@ public class ColeccionJuegos {
 	}
 
 	public static void nuevojuego() {
-		services.ColeccionJuegos.nuevojuego();
+		services.ColeccionJuegos.nuevojuego(juego);
 	}
 
 
