@@ -1,4 +1,6 @@
 package control;
+import utils.Entrada;
+import model.Juego;
 
 import model.Juego;
 import utils.Entrada;
@@ -23,8 +25,10 @@ public class ColeccionJuegos {
 		} while (continuar);
 	}
 
-	public static void nuevojuego() {
-		services.ColeccionJuegos.nuevojuego(juego);
+
+	public static void nuevojuego(Juego juego) {
+		services.ColeccionJuegos.AddJuego(juego);
+
 	}
 
 

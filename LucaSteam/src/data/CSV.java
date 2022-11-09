@@ -33,10 +33,9 @@ public class CSV {
 				String publisher = cosas[5];
 				
 				Juego juego = new Juego(rank, nombre, plataforma, annosalida, genero, publisher);
-				System.out.println(juego);
+				//System.out.println(juego);
 				
-				//TODO añadir juego a la coleccion
-				
+				control.ColeccionJuegos.nuevojuego(juego);
 				
 				line=br.readLine();
 			}
