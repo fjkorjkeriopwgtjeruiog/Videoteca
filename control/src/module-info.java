@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author vermia
- *
- */
-module control {
-}
