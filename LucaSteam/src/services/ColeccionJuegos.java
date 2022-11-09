@@ -6,7 +6,9 @@ public class ColeccionJuegos {
 
 	private data.ColeccionJuegos coleccion = new data.ColeccionJuegos();
 
-	public boolean AddJuego(Juego j) throws StockException {
+	public static boolean AddJuego(Juego j) {
         
+		
+		return false; //de momento, luego ya se cambia
     }
 }
