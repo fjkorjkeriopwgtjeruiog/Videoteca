@@ -2,6 +2,9 @@ package control;
 import utils.Entrada;
 import model.Juego;
 
+import model.Juego;
+import utils.Entrada;
+
 public class ColeccionJuegos {
 
 	public static void menu () {
@@ -15,7 +18,6 @@ public class ColeccionJuegos {
 		if (opcion==1) {
 			control.CSV.cargaInicialdeDatos();
 			opcion1activa= true;
-			
 		}
 		
 		//otras opciones
@@ -23,8 +25,10 @@ public class ColeccionJuegos {
 		} while (continuar);
 	}
 
+
 	public static void nuevojuego(Juego juego) {
 		services.ColeccionJuegos.AddJuego(juego);
+
 	}
 
 
