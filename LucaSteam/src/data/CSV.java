@@ -44,6 +44,7 @@ public class CSV {
 				Juego juego = new Juego(rank, nombre, plataforma, annosalida, genero, publisher);
 				
 				control.ColeccionJuegos.nuevojuego(juego);
+				System.out.println(juego);
 				
 				line=bufferedreader.readLine();
 			}
