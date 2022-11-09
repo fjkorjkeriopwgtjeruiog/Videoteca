@@ -12,40 +12,40 @@ import java.io.IOException;
 /**
  * CSV / Carga los datos iniciales a partir de un archivo CSV
  * @author  Martin
- * @version 1.0
+ * @version 1.1
  * 09-11-2022
  */
 
 public class CSV {
 	public static void buildGameCollectionFromCSVFile(String filepath) {
 		try {
-			FileReader fr = new FileReader(new File(filepath));
-			BufferedReader br = new BufferedReader(fr);
+			FileReader filereader = new FileReader(new File(filepath));
+			BufferedReader bufferedreader = new BufferedReader(filereader);
 			
-			br.readLine(); // La primera linea son las cabeceras
-			String line = br.readLine();
+			bufferedreader.readLine(); // La primera linea son las cabeceras
+			String line = bufferedreader.readLine();
 			while( line != null) {
-				String[] cosas = line.split(",");
+				String[] filaDelArchivoCSV = line.split(",");
 				
-				int rank = Integer.parseInt(cosas[0]);
-				String nombre = cosas[1];
+				int rank = Integer.parseInt(filaDelArchivoCSV[0]);
+				String nombre = filaDelArchivoCSV[1];
 				Plataformas plataforma = null;
 				
 				int annosalida = -1;
 				try{
-					annosalida = Integer.parseInt(cosas[3]);
+					annosalida = Integer.parseInt(filaDelArchivoCSV[3]);
 				}catch(NumberFormatException ex) {
 					annosalida = -1;
 				}
 				
 				Generos genero = null;
-				String publisher = cosas[5];
+				String publisher = filaDelArchivoCSV[5];
 				
 				Juego juego = new Juego(rank, nombre, plataforma, annosalida, genero, publisher);
 				
 				control.ColeccionJuegos.nuevojuego(juego);
 				
-				line=br.readLine();
+				line=bufferedreader.readLine();
 			}
 			
 			
