@@ -6,7 +6,7 @@ import model.Juego;
 import utils.Entrada;
 
 /**
- * ColeccionJuegos / Saca el menu principal
+ * ColeccionJuegos 
  * @author  Ivan
  * @version 1.0
  * 09-11-2022
@@ -14,7 +14,12 @@ import utils.Entrada;
 
 public class ColeccionJuegos {
 
-	
+	/**
+	 * ColeccionJuegos / Saca el menu principal
+	 * @author  Ivan
+	 * @version 1.0
+	 * 09-11-2022
+	 */
 	public static void menu () {
 		boolean continuar = false; //posibilidad de salir del loop
 		do {	
@@ -33,10 +38,12 @@ public class ColeccionJuegos {
 		} while (continuar);
 	}
 
-	 /**
-	  * Llama a la capa de servicios
-	  *
-	  */
+	/**
+	 * ColeccionJuegos / llama al metodo en servicios
+	 * @author  Ivan
+	 * @version 1.0
+	 * 09-11-2022
+	 */
 	public static void nuevojuego(Juego juego) {
 		services.ColeccionJuegos.AddJuego(juego);
 
