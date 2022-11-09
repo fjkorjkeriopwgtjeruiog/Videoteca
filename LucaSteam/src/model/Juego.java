@@ -90,7 +90,7 @@ public class Juego {
 	}
 	
 	public Juego(String ruta){
-        try(BufferedReader br = new BufferedReader(new FileReader(ruta))) {
+        try(BufferedReader br = new BufferedReader(new FileReader(ruta))){
             rank=Integer.parseInt(br.readLine());
             nombre=br.readLine();
             plataforma=Plataformas.valueOf(br.readLine());
