@@ -29,7 +29,13 @@ public class ColeccionJuegos {
 		System.out.println("Presiona 1 para hacer una carga incial de juegos");
 		opcion = Entrada.entradaInt();
 		if (opcion==1) {
-			control.CSV.cargaInicialdeDatos();
+			//Hola, soy Martin. He cambiado el funcionamiento del CSV por recomendacion de Antonio 
+			//y por tanto esto tambien tiene que cambiar.
+			//Hay que tener un objeto de tipo CSV, y el metodo cargaInicialDeDatos lo que hace
+			//es devolver el HashMap<Integer,Juego> que habrá que añadir luego a ColeccionJuegos cuando se pueda
+			
+			//control.CSV.cargaInicialdeDatos();
+			
 			opcion1activa= true;
 		}
 		

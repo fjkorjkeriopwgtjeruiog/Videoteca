@@ -1,6 +1,6 @@
 package utils;
 
-import java.io.File;
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -13,11 +13,12 @@ import java.io.IOException;
 public class Logging {
 	public static void Log(String infoToLog) {
 		try {
-			FileWriter fw = new FileWriter(new File("Log.txt"));
-			fw.write("[LOG] "+infoToLog + "\n");
+			BufferedWriter bufferedwriter = new BufferedWriter(new FileWriter("Log.txt"));
+			bufferedwriter.write("[LOG] "+infoToLog + "\n");
+			bufferedwriter.close();
 			
 		} catch(IOException ex) {
-			
+			System.out.println("IOException");
 		}
 		
 		

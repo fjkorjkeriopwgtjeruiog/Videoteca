@@ -1,5 +1,7 @@
 package control;
+import java.util.HashMap;
 
+import model.Juego;
 
 /**
  * CSV / Carga los datos iniciales a partir de un archivo CSV
@@ -7,10 +9,12 @@ package control;
  * @version 1.0
  * 09-11-2022
  */
+
+
 public class CSV {
-	
-	public static void cargaInicialdeDatos(){
-		services.CSV.cargaInicialdeDatos();
+	services.CSV csvServiceManager;
+	public HashMap<Integer, Juego> cargaInicialdeDatos(){
+		return csvServiceManager.cargaInicialdeDatos();
 	}
 	
 }

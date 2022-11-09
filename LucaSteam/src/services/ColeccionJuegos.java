@@ -13,7 +13,7 @@ public class ColeccionJuegos {
     }
 	
 	public boolean AddProducto(Juego j) throws Exception  {
-        //Habria que decidir un algoritmo de códigos (una funciona Hash)
+        //Habria que decidir un algoritmo de cï¿½digos (una funciona Hash)
         return coleccion.CrearJuego((int) (Math.random() * 100000), j);
     }
 }
