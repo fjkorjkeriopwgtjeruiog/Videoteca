@@ -32,40 +32,40 @@ public class Juego {
 				+ plataforma + ", annosalida=" + annosalida + ", genero="
 				+ genero + ", publisher=" + publisher + "]";
 	}
-	private int getRank() {
+	public int getRank() {
 		return rank;
 	}
-	private void setRank(int rank) {
+	public void setRank(int rank) {
 		this.rank = rank;
 	}
-	private String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
-	private void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	private Enum getPlataforma() {
+	public Enum getPlataforma() {
 		return plataforma;
 	}
-	private void setPlataforma(Enum plataforma) {
+	public void setPlataforma(Enum plataforma) {
 		this.plataforma = plataforma;
 	}
-	private int getAnnosalida() {
+	public int getAnnosalida() {
 		return annosalida;
 	}
-	private void setAnnosalida(int annosalida) {
+	public void setAnnosalida(int annosalida) {
 		this.annosalida = annosalida;
 	}
-	private Enum getGenero() {
+	public Enum getGenero() {
 		return genero;
 	}
-	private void setGenero(Enum genero) {
+	public void setGenero(Enum genero) {
 		this.genero = genero;
 	}
-	private String getPublisher() {
+	public String getPublisher() {
 		return publisher;
 	}
-	private void setPublisher(String publisher) {
+	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
 	
