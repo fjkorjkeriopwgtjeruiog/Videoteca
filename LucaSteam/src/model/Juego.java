@@ -4,15 +4,15 @@ public class Juego {
 
 	private int rank;
 	private String nombre;
-	private Enum plataforma;
+	private Plataformas plataforma;
 	private int annosalida;
-	private Enum genero;
+	private Generos genero;
 	private String publisher;
 	private Juego() {
 		super();
 	}
-	private Juego(int rank, String nombre, Enum plataforma, int annosalida,
-			Enum genero, String publisher) {
+	public Juego(int rank, String nombre, Plataformas plataforma, int annosalida,
+			Generos genero, String publisher) {
 		super();
 		this.rank = rank;
 		this.nombre = nombre;
@@ -32,40 +32,40 @@ public class Juego {
 				+ plataforma + ", annosalida=" + annosalida + ", genero="
 				+ genero + ", publisher=" + publisher + "]";
 	}
-	private int getRank() {
+	public int getRank() {
 		return rank;
 	}
-	private void setRank(int rank) {
+	public void setRank(int rank) {
 		this.rank = rank;
 	}
-	private String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
-	private void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	private Enum getPlataforma() {
+	public Plataformas getPlataforma() {
 		return plataforma;
 	}
-	private void setPlataforma(Enum plataforma) {
+	public void setPlataforma(Plataformas plataforma) {
 		this.plataforma = plataforma;
 	}
-	private int getAnnosalida() {
+	public int getAnnosalida() {
 		return annosalida;
 	}
-	private void setAnnosalida(int annosalida) {
+	public void setAnnosalida(int annosalida) {
 		this.annosalida = annosalida;
 	}
-	private Enum getGenero() {
+	public Generos getGenero() {
 		return genero;
 	}
-	private void setGenero(Enum genero) {
+	public void setGenero(Generos genero) {
 		this.genero = genero;
 	}
-	private String getPublisher() {
+	public String getPublisher() {
 		return publisher;
 	}
-	private void setPublisher(String publisher) {
+	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
 	

@@ -27,8 +27,7 @@ public class ColeccionJuegos {
 
 
 	public static void nuevojuego(Juego juego) {
-		services.ColeccionJuegos.AddJuego(juego);
-
+		services.ColeccionJuegos.CrearJuego(juego);
 	}
 
 
