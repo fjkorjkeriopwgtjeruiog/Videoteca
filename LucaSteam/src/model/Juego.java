@@ -2,17 +2,16 @@ package model;
 
 public class Juego {
 
-	int rank;
-	String nombre;
-	Enum plataforma;
-	int annosalida;
-	Enum genero;
-	String publisher;
-	public Juego() {
+	private int rank;
+	private String nombre;
+	private Enum plataforma;
+	private int annosalida;
+	private Enum genero;
+	private String publisher;
+	private Juego() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	public Juego(int rank, String nombre, Enum plataforma, int annosalida,
+	private Juego(int rank, String nombre, Enum plataforma, int annosalida,
 			Enum genero, String publisher) {
 		super();
 		this.rank = rank;
@@ -23,7 +22,7 @@ public class Juego {
 		this.publisher = publisher;
 	}
 	
-	public void crearJuego() {
+	private void crearJuego() {
 		
     }
 	
@@ -33,40 +32,40 @@ public class Juego {
 				+ plataforma + ", annosalida=" + annosalida + ", genero="
 				+ genero + ", publisher=" + publisher + "]";
 	}
-	public int getRank() {
+	private int getRank() {
 		return rank;
 	}
-	public void setRank(int rank) {
+	private void setRank(int rank) {
 		this.rank = rank;
 	}
-	public String getNombre() {
+	private String getNombre() {
 		return nombre;
 	}
-	public void setNombre(String nombre) {
+	private void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Enum getPlataforma() {
+	private Enum getPlataforma() {
 		return plataforma;
 	}
-	public void setPlataforma(Enum plataforma) {
+	private void setPlataforma(Enum plataforma) {
 		this.plataforma = plataforma;
 	}
-	public int getAnnosalida() {
+	private int getAnnosalida() {
 		return annosalida;
 	}
-	public void setAnnosalida(int annosalida) {
+	private void setAnnosalida(int annosalida) {
 		this.annosalida = annosalida;
 	}
-	public Enum getGenero() {
+	private Enum getGenero() {
 		return genero;
 	}
-	public void setGenero(Enum genero) {
+	private void setGenero(Enum genero) {
 		this.genero = genero;
 	}
-	public String getPublisher() {
+	private String getPublisher() {
 		return publisher;
 	}
-	public void setPublisher(String publisher) {
+	private void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
 	
