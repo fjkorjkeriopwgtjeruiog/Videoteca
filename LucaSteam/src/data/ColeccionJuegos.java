@@ -47,7 +47,19 @@ public class ColeccionJuegos {
     METODOS
     */
 
-    public void ListarJuegos() {
+    @Override
+	public String toString() {
+    	String string = new String();
+    	String string2 = "\n";
+    	for (Integer  key : coleccion.keySet()) {
+    		Juego juegoListando = new Juego();
+    		juegoListando = coleccion.get(key);
+    		string+=juegoListando.toString()+string2;
+    	}
+		return string;
+	}
+
+	public void ListarJuegos() {
         Integer clave;
         Iterator<Integer> juegos = coleccion.keySet().iterator();
         System.out.println("-- COLECCION DE JUEGOS --");
