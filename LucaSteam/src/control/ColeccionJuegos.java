@@ -2,6 +2,7 @@ package control;
 import utils.Entrada;
 
 import java.util.List;
+import java.util.HashMap;
 import model.Plataformas;
 import model.Generos;
 import model.Juego;
@@ -37,6 +38,7 @@ public class ColeccionJuegos {
 		System.out.println("Presiona 1 para hacer una carga incial de juegos");
 		System.out.println("Presiona 2 para hacer añadir un juego");
 		System.out.println("Presiona 3 para listar una coleccion");
+		System.out.println("Presiona 4 para listar los juegos del género 'plataforma'");
 		opcion = Entrada.entradaInt();
 		if (opcion==1) {
 			opcion1();	
@@ -46,6 +48,9 @@ public class ColeccionJuegos {
 		}
 		if (opcion==3) {
 			opcion3();
+		}
+		if (opcion==4) {
+			opcion4();
 		}
 		
 		//otras opciones
@@ -93,6 +98,10 @@ public class ColeccionJuegos {
 	 
 	 public void opcion3() {
 		coleccionServices.ListarJuegos();
+	 }
+	 
+	 public void opcion4() {
+		 services.Informe.genero((HashMap<Integer,Juego>)coleccionServices.getColeccion().getColeccion(), "Platform");
 	 }
 	 
 	public boolean addLista(List<Juego> lista){

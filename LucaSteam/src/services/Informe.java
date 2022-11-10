@@ -7,63 +7,15 @@ import model.Plataformas;
 import java.util.HashMap;
 
 /**
- * leerJuego / Lee de forma más organizada los datos de un juego.
+ * Informe / Clase para realizar listas de juegos, filtradas o no
  * @author  Daniel
- * @version 1.0
+ * @version 1.1
  * 10-11-2022
  */
 
-/**
- * leerLista / Lee una lista de juegos.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
-
-/**
- * nintendo / Muestra los juegos creados por la publicadora Nintendo.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
-
-/**
- * sigloxx / Muestra los juegos creados en el siglo XX.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
-
-/**
- * publicadora / Muestra los juegos creados por una determinada publicadora.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
-
-/**
- * anno / Muestra los juegos creados en un determinado año.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
-
-/**
- * genero / Muestra los juegos de un determinado genero de jugabilidad.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
-
-/**
- * plataforma / Muestra los juegos creados para una determinada consola.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
 
 public class Informe{
-	public void leerJuego(Juego j){
+	public static void leerJuego(Juego j){
 		System.out.println("-------------------");
 		System.out.println(j.getNombre()+".");
 		System.out.println("Rango "+j.getRank()+".");
@@ -73,7 +25,7 @@ public class Informe{
 		System.out.println("Publicador: "+j.getPublisher()+".\n");
 	}
 	
-	public void leerLista(HashMap<Integer,Juego> lista){
+	public static void leerLista(HashMap<Integer,Juego> lista){
 		if(lista.size()==0)
 			System.out.println("Lista vacía");
 		else
@@ -81,7 +33,7 @@ public class Informe{
 				leerJuego(j);
 	}
 	
-	public void nintendo(HashMap<Integer,Juego> coleccion){
+	public static void nintendo(HashMap<Integer,Juego> coleccion){
 		HashMap<Integer,Juego> nin=new HashMap<>();
     	int l=coleccion.size();
     	int q=1;
@@ -93,7 +45,7 @@ public class Informe{
     	leerLista(nin);
     }
 	
-	public void sigloxx(HashMap<Integer,Juego> coleccion){
+	public static void sigloxx(HashMap<Integer,Juego> coleccion){
 		HashMap<Integer,Juego> nin=new HashMap<>();
     	int l=coleccion.size();
     	int q=1;
@@ -105,7 +57,7 @@ public class Informe{
     	leerLista(nin);
     }
 	
-	public void publicadora(HashMap<Integer,Juego> coleccion,String pub){
+	public static void publicadora(HashMap<Integer,Juego> coleccion,String pub){
 		HashMap<Integer,Juego> nin=new HashMap<>();
     	int l=coleccion.size();
     	int q=1;
@@ -117,7 +69,7 @@ public class Informe{
     	leerLista(nin);
     }
 	
-	public void anno(HashMap<Integer,Juego> coleccion,int ann){
+	public static void anno(HashMap<Integer,Juego> coleccion,int ann){
 		HashMap<Integer,Juego> nin=new HashMap<>();
     	int l=coleccion.size();
     	int q=1;
@@ -129,7 +81,7 @@ public class Informe{
     	leerLista(nin);
     }
 	
-	public boolean plataforma(HashMap<Integer,Juego> coleccion,String p){
+	public static boolean plataforma(HashMap<Integer,Juego> coleccion,String p){
 		HashMap<Integer,Juego> nin=new HashMap<>();
 		Plataformas j;
     	try{
@@ -150,23 +102,24 @@ public class Informe{
     	return true;
     }
 	
-	public boolean genero(HashMap<Integer,Juego> coleccion,String g){
+	public static boolean genero(HashMap<Integer,Juego> coleccion,String g){
 		HashMap<Integer,Juego> nin=new HashMap<>();
-		Generos u;
+		Generos generoParaFiltrar;
     	try {
-    		u=Generos.valueOf(g);
+    		generoParaFiltrar=Juego.getGenero(g);
     	}
     	catch(Exception e) {
     		leerLista(nin);
     		return false;
     	}
-    	int l=coleccion.size();
     	int q=1;
-    	for(int a=0; a<l; a++)
-    		if(coleccion.get(a).getGenero()==u){
-    			nin.put(q,coleccion.get(a));
+    	for(Juego juego : coleccion.values()) {
+    		if(juego.getGenero()==generoParaFiltrar){
+    			nin.put(q,juego);
     			q++;
     		}
+    	}
+    		
     	leerLista(nin);
     	return true;
     }
