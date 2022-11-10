@@ -10,7 +10,7 @@ import model.Juego;
 
 /**
  * Control.ColeccionJuegos / Clase que contiene el menu
- * @author  Daniel e Ivan
+ * @author  Daniel, Martin e Ivan
  * @version 2.0
  * 10-11-2022
  */

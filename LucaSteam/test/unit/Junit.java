@@ -18,7 +18,7 @@ import data.ColeccionJuegos;
 
 /**
  * Junit / Pruebas unitarias 
- * @author  Daniel
+ * @author  Daniel y Martin
  * @version 1.2
  * 10-11-2022
  */

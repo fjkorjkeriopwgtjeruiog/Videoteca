@@ -5,24 +5,11 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/**
- * guardar / guarda los datos de un juego en un fichero. Debes dar la ruta del fichero donde guardarás los datos.
- * @author  Daniel
- * @version 1.0
- * 09-11-2022
- */
 
 /**
- * Juego(String ruta) / Crea un nuevo juego a partir de los datos de un fichero. Debes dar la ruta donde guardaste los datos
- * @author  Daniel
- * @version 1.0
- * 09-11-2022
- */
-
-/**
- * copiar(Juego j) / Crea una copia de otro juego, por ejemplo para crear la versión de otra consola.
- * @author  Daniel
- * @version 1.0
+ * Juego / Contiene los datos de un Juego
+ * @author  Daniel y Martin
+ * @version 1.2
  * 09-11-2022
  */
 

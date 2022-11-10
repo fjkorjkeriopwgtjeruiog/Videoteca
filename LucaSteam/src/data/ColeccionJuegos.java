@@ -7,18 +7,12 @@ import java.util.Map;
 import model.Juego;
 
 /**
- * addLista / Coge una lista de juegos y los añade todos. Devuelve false o true según si se produjo un error o no.
+ * ColeccionJuegos / Coleccion principal de juegos
  * @author  Daniel
  * @version 1.0
  * 10-11-2022
  */
 
-/**
- * addListaDatos / Interactua con el ColeccionJuegos de la carpeta services.
- * @author  Daniel
- * @version 1.0
- * 10-11-2022
- */
 
 public class ColeccionJuegos {
 

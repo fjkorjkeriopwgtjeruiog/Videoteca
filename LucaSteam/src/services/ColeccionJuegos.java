@@ -5,11 +5,10 @@ import model.Juego;
 import utils.Logging;
 
 /**
- * addLista / Coge una lista de juegos y los añade todos. Devuelve false o true
- * según si se produjo un error o no.
- * 
+ * ColeccionJuegos / Coleccion principal de juegos
  * @author Daniel
- * @version 1.0 09-11-2022
+ * @version 1.0 
+ * 09-11-2022
  */
 
 
