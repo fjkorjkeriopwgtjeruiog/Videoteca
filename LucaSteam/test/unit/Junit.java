@@ -1,8 +1,6 @@
 package unit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-
 import java.util.HashMap;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -12,6 +10,21 @@ import org.junit.jupiter.api.Test;
 
 import model.Juego;
 import utils.Logging;
+import data.ColeccionJuegos;
+
+/**
+ * correccion(String ruta) / Comprueba que los datos de un fichero estén correctos.
+ * @author  Daniel
+ * @version 1.0
+ * 09-11-2022
+ */
+
+/**
+ * incluir(ColeccionJuegos c,Juego j) / Prueba unitaria en la que añadimos un juego a una lista y revisamos que haya salido bien.
+ * @author  Daniel
+ * @version 1.0
+ * 10-11-2022
+ */
 
 public class Junit {
 	
@@ -56,5 +69,23 @@ public class Junit {
 		
 		
 		assertEquals(cantidadEsperada, mapaJuegosCargadosDeCSV.size());
+	}
+	
+	public boolean correccion(String ruta) {
+		try {
+			new Juego(ruta);
+		}
+		catch(Exception e){
+			return false;
+		}
+		return true;
+	}
+	
+	public void incluir(ColeccionJuegos c,Juego j){
+		try{
+			System.out.println(c);
+		}catch(Exception e){
+			System.out.println("Se ha producido un error.");
+		}
 	}
 }

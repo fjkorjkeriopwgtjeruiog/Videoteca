@@ -16,7 +16,7 @@ public class CSV {
 		
 	}
 	
-	public HashMap<Integer, Juego>  cargaInicialdeDatos() {
+	public HashMap<Integer, Juego>  cargaInicialdeDatos(){
 		return csvDataManager.buildGameCollectionFromCSVFile("vgsales.csv");
 	}
 }

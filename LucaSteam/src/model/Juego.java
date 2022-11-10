@@ -19,6 +19,14 @@ import java.io.IOException;
  * 09-11-2022
  */
 
+/**
+ * copiar(Juego j) / Crea una copia de otro juego, por ejemplo para crear la versión de otra consola.
+ * @author  Daniel
+ * @version 1.0
+ * 09-11-2022
+ */
+
+
 public class Juego {
 
 	private int rank;
@@ -99,7 +107,7 @@ public class Juego {
             publisher=br.readLine();
         }catch (IOException e){
             System.out.println("Error");
-	}
+        }
     }
 
 	public void guardar(String ruta){
@@ -115,5 +123,9 @@ public class Juego {
 		}catch (IOException e){
 		    System.out.println("Error");
 		}
+	}
+		
+	public Juego copiar(Juego j) {
+		return new Juego(j.rank,j.nombre,j.plataforma,j.annosalida,j.genero,j.publisher);
 	}
 }

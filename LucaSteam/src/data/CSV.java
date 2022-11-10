@@ -50,10 +50,6 @@ public class CSV {
 				
 				line=bufferedreader.readLine();
 			}
-			
-			
-			
-			
 		} catch (FileNotFoundException ex) {
 			utils.Logging.Log("Archivo no encontrado");
 		} catch (IOException ex){
