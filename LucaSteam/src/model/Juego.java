@@ -99,7 +99,7 @@ public class Juego {
             publisher=br.readLine();
         }catch (IOException e){
             System.out.println("Error");
-	}
+        }
     }
 
 	public void guardar(String ruta){
