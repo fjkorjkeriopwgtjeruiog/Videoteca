@@ -1,4 +1,5 @@
 package data;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -10,14 +11,28 @@ import model.Juego;
  * addLista / Coge una lista de juegos y los añade todos. Devuelve false o true según si se produjo un error o no.
  * @author  Daniel
  * @version 1.0
- * 09-11-2022
+ * 10-11-2022
  */
 
 /**
  * addListaDatos / Interactua con el ColeccionJuegos de la carpeta services.
  * @author  Daniel
  * @version 1.0
- * 09-11-2022
+ * 10-11-2022
+ */
+
+/**
+ * nintendo / Muestra los juegos creados por la publicadora Nintendo.
+ * @author  Daniel
+ * @version 1.0
+ * 10-11-2022
+ */
+
+/**
+ * sigloxx / Muestra los juegos creados en el siglo XX.
+ * @author  Daniel
+ * @version 1.0
+ * 10-11-2022
  */
 
 public class ColeccionJuegos {
@@ -70,6 +85,24 @@ public class ColeccionJuegos {
 
     public void eliminarJuego(int cod) {
     	coleccion.remove(cod);
+    }
+    
+    public ArrayList<Juego> nintendo(){
+    	ArrayList<Juego> nin=new ArrayList<>();
+    	int l=coleccion.size();
+    	for(int a=0; a<l; a++)
+    		if(coleccion.get(a).getPublisher()=="nintendo")
+    			nin.add(coleccion.get(a));
+    	return nin;
+    }
+    
+    public ArrayList<Juego> sigloxx(){
+    	ArrayList<Juego> nin=new ArrayList<>();
+    	int l=coleccion.size();
+    	for(int a=0; a<l; a++)
+    		if(coleccion.get(a).getAnnosalida()<2001)
+    			nin.add(coleccion.get(a));
+    	return nin;
     }
 
     public boolean CantidadesJuego(int cod) throws Exception {
