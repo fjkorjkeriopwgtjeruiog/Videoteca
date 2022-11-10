@@ -69,10 +69,10 @@ public class ColeccionJuegos {
         }
     }
     
-    public boolean CrearJuego(int codigo, Juego j) throws Exception {
+    public boolean CrearJuego(int codigo, Juego j) throws exception.CodigoRepetidoException {
         if (coleccion.containsKey(codigo)) {
         	System.out.println("m1");
-        	throw new Exception("No se puede guardar el juego. El codigo esta repetido.");        	
+        	throw new exception.CodigoRepetidoException();        	
         } else {
         	coleccion.put(codigo, j);
             return true;

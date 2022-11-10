@@ -8,9 +8,11 @@ package model;
  */
 
 public enum Plataformas{
-	atari2600,jaguar,
-    nes,snes,n64,gamecube,wii,
-    playstation,ps2,ps3,
+	atari2600,jaguar,genesis, birth2,
+    nes,snes,n64,gamecube,wii, wiiu, n3ds,
+    playstation,ps2,ps3,ps4,psp, pc, psvita,
     mastersystem,megadrive,saturn,dreamcast,
-    xbox,xbox360;
+    xbox,xbox360, xboxone,
+    gb, gba, nds,
+    desconocida;
 }

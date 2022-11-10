@@ -66,7 +66,7 @@ public class Junit {
 		
 		assertEquals(cantidadEsperada, listaJuegosCargadosDeCSV.size());
 	}
-	
+	@Test
 	public boolean correccion(String ruta) {
 		try {
 			new Juego(ruta);
@@ -76,7 +76,7 @@ public class Junit {
 		}
 		return true;
 	}
-	
+	@Test
 	public void incluir(ColeccionJuegos c,Juego j){
 		try{
 			System.out.println(c);

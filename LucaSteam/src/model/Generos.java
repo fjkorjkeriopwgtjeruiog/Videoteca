@@ -9,11 +9,16 @@ package model;
 
 public enum Generos{
     plataformas,
+    deportes,
     rpg,
+    puzzle,
     accion,
+    simulacion,
+    aventura,
     lucha,
     carrera,
     estrategia,
     terror,
-    tiros;
+    tiros,
+    misc;
 }

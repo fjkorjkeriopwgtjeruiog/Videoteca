@@ -2,6 +2,7 @@ package services;
 
 import java.util.List;
 import model.Juego;
+import utils.Logging;
 
 /**
  * addLista / Coge una lista de juegos y los añade todos. Devuelve false o true
@@ -15,9 +16,14 @@ import model.Juego;
 public class ColeccionJuegos{
 	private data.ColeccionJuegos coleccion = new data.ColeccionJuegos();
 
-	public boolean CrearJuego(Juego j) throws Exception {
-		//Habria que decidir un algoritmo de codigos (una funciona Hash)
-        return coleccion.CrearJuego((int) (Math.random() * 100000), j);
+	public boolean CrearJuego(Juego j)  {
+		try {
+			return coleccion.CrearJuego((int) j.getRank(), j); //es lo unico que se me ha ocurrido, aunque provoque informacion duplicada
+		} catch (exception.CodigoRepetidoException ex) {
+			Logging.Log("Se ha intentado crear un juego con un codigo que ya existia");
+			return false;
+		}
+        
     }
 
     public void ListarJuegos() {
