@@ -29,7 +29,7 @@ public class ColeccionJuegos {
     METODOS
     */
 
-    public void ListarProductos() {
+    public void ListarJuegos() {
         Integer clave;
         Iterator<Integer> juegos = coleccion.keySet().iterator();
         System.out.println("-- COLECCION DE JUEGOS --");

@@ -27,7 +27,7 @@ public class SuperServices implements ISuperServices {
 
     //Esto hace que el metodo de Datos sea más sencillo.. pero compkica la capa servicios
     public boolean eliminarProducto() throws StockException, Exception {
-        int codigo = Datos.recogeInt("   Indica el código del producto a eliminar");
+        int codigo = Datos.recogeInt("Indica el código del producto a eliminar");
 
         if (stock.existeCodigo(codigo)) {
             stock.eliminarProducto(codigo);
