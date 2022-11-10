@@ -14,6 +14,15 @@ import model.Juego;
 
 public class ColeccionJuegos{
 	private data.ColeccionJuegos coleccion = new data.ColeccionJuegos();
+	
+
+	public data.ColeccionJuegos getColeccion() {
+		return coleccion;
+	}
+
+	public void setColeccion(data.ColeccionJuegos coleccion) {
+		this.coleccion = coleccion;
+	}
 
 	public boolean CrearJuego(Juego j) throws Exception {
 		//Habria que decidir un algoritmo de codigos (una funciona Hash)
