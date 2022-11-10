@@ -1,8 +1,6 @@
 package unit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotSame;
-
 import java.util.HashMap;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -56,5 +54,15 @@ public class Junit {
 		
 		
 		assertEquals(cantidadEsperada, mapaJuegosCargadosDeCSV.size());
+	}
+	
+	public boolean correccion(String ruta) {
+		try {
+			new Juego(ruta);
+		}
+		catch(Exception e){
+			return false;
+		}
+		return true;
 	}
 }

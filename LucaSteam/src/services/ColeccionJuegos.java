@@ -12,9 +12,8 @@ import model.Juego;
  */
 
 public class ColeccionJuegos{
-
 	private data.ColeccionJuegos coleccion = new data.ColeccionJuegos();
-	
+
 	public boolean CrearJuego(Juego j) throws Exception {
 		//Habria que decidir un algoritmo de codigos (una funciona Hash)
         return coleccion.CrearJuego((int) (Math.random() * 100000), j);
@@ -23,7 +22,7 @@ public class ColeccionJuegos{
     public void ListarJuegos() {
     	coleccion.ListarJuegos();
     }
-    
+
     public boolean addLista(List<Juego> lista){
     	for(Juego j: lista) {
     		try{
