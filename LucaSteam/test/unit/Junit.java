@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import model.Juego;
+import model.Plataformas;
 import utils.Logging;
 import data.ColeccionJuegos;
 
@@ -66,7 +67,8 @@ public class Junit {
 		
 		assertEquals(cantidadEsperada, listaJuegosCargadosDeCSV.size());
 	}
-	@Test
+	
+	
 	public boolean correccion(String ruta) {
 		try {
 			new Juego(ruta);
@@ -76,7 +78,7 @@ public class Junit {
 		}
 		return true;
 	}
-	@Test
+	
 	public void incluir(ColeccionJuegos c,Juego j){
 		try{
 			System.out.println(c);

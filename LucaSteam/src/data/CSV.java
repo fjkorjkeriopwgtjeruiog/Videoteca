@@ -31,7 +31,7 @@ public class CSV {
 				int rank = Integer.parseInt(filaDelArchivoCSV[0]);
 				String nombre = filaDelArchivoCSV[1];
 				
-				Plataformas plataforma = Plataformas.desconocida;
+				Plataformas plataforma = Plataformas.desconocida; //Por defecto
 				if(filaDelArchivoCSV[2].equals("Wii")) {
 					plataforma=Plataformas.wii;
 				} else if(filaDelArchivoCSV[2].equals("NES")) {
@@ -81,7 +81,7 @@ public class CSV {
 				}else if(filaDelArchivoCSV[2].equals("DC")) {
 					plataforma=Plataformas.dreamcast;
 				}else if(filaDelArchivoCSV[2].equals("Birth 2")) {
-					plataforma=Plataformas.psvita; //mirar entrada 11135 del csv
+					plataforma=Plataformas.psvita; //mirar entrada 11135 del csv. Probablemente habra mas como esa, por eso puse un por defecto
 				}
 				
 				int annosalida = -1;
@@ -91,7 +91,7 @@ public class CSV {
 					annosalida = -1;
 				}
 				
-				Generos genero = Generos.misc;
+				Generos genero = Generos.misc; //Por defecto
 				if(filaDelArchivoCSV[4].equals("Action")) {
 					genero=Generos.accion;
 				} else if(filaDelArchivoCSV[4].equals("Sports")) {
