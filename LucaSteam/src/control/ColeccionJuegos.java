@@ -9,13 +9,6 @@ import model.Juego;
 
 
 /**
- * ColeccionJuegos 
- * @author  Ivan
- * @version 1.0
- * 09-11-2022
- */
-
-/**
  * Control.ColeccionJuegos / Clase que contiene el menu
  * @author  Daniel e Ivan
  * @version 2.0
