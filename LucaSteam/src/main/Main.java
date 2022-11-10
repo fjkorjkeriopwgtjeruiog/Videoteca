@@ -2,6 +2,7 @@ package main;
 
 public class Main {
 	public static void main(String[] args) {
-		test.Pruebas.archivo();
+		control.ColeccionJuegos coleccion = new control.ColeccionJuegos();
+		coleccion.menu();
 	}
 }

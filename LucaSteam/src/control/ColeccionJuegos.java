@@ -13,14 +13,14 @@ import utils.Entrada;
  */
 
 public class ColeccionJuegos {
-
+	control.CSV csv;
 	/**
 	 * ColeccionJuegos / Saca el menu principal
 	 * @author  Ivan
 	 * @version 1.0
 	 * 09-11-2022
 	 */
-	public static void menu () {
+	public void menu () {
 		boolean continuar = false; //posibilidad de salir del loop
 		do {	
 		boolean opcion1activa= false;
@@ -34,7 +34,7 @@ public class ColeccionJuegos {
 			//Hay que tener un objeto de tipo CSV, y el metodo cargaInicialDeDatos lo que hace
 			//es devolver el HashMap<Integer,Juego> que habrá que añadir luego a ColeccionJuegos cuando se pueda
 			
-			//control.CSV.cargaInicialdeDatos();
+			cargarDatosIniciales();
 			
 			opcion1activa= true;
 		}
@@ -55,7 +55,12 @@ public class ColeccionJuegos {
 		//services.ColeccionJuegos.CrearJuego(juego);
 	}
 	
-	
+	//Le pide al CSV que cargue los datos iniciales
+	public boolean cargarDatosIniciales() {
+		csv.cargaInicialdeDatos();
+		
+		return false;
+	}
 	
 
 
