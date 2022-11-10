@@ -83,7 +83,7 @@ public class ColeccionJuegos {
 
 
 	public boolean addLista(List<Juego> lista){
-    	int l=coleccion.size()+1;
+    	int l=coleccionServices.size()+1;
     	for(Juego j: lista) {
     		try{
 				CrearJuego(l,j);

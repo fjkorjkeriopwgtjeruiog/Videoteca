@@ -58,7 +58,5 @@ public class Junit {
 		assertEquals(cantidadEsperada, listaJuegosCargadosDeCSV.size());
 	}
 	
-	public void testingListarTodosLosJuegos() {
-		Juego juego1=new Juego();
-	}
+	
 }
