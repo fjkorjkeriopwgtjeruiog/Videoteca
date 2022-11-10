@@ -13,6 +13,9 @@ import model.Juego;
 
 public class CSV {
 	services.CSV csvServiceManager;
+	public CSV() {
+		csvServiceManager=new services.CSV();
+	}
 	public ArrayList<Juego> cargaInicialdeDatos(){
 		return csvServiceManager.cargaInicialdeDatos();
 	}

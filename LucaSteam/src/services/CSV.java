@@ -13,7 +13,7 @@ public class CSV {
 	data.CSV csvDataManager;
 	
 	public CSV() {
-		
+		csvDataManager=new data.CSV();
 	}
 	
 	public ArrayList<Juego>  cargaInicialdeDatos() {

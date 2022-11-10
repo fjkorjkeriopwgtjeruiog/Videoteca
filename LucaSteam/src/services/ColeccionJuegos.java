@@ -22,7 +22,9 @@ public class ColeccionJuegos {
     	}
     }
 
-	public void addLista(List<Juego> cargaInicialdeDatos) {
+	public boolean addLista(List<Juego> cargaInicialdeDatos) {
 		
+		
+		return true;
 	}
 }

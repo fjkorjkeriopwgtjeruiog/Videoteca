@@ -15,6 +15,11 @@ import utils.Entrada;
 public class ColeccionJuegos {
 	control.CSV csv;
 	services.ColeccionJuegos coleccionServices;
+	public ColeccionJuegos(){
+		csv=new control.CSV();
+		coleccionServices=new services.ColeccionJuegos();
+	}
+	
 	/**
 	 * ColeccionJuegos / Saca el menu principal
 	 * @author  Ivan
@@ -51,16 +56,18 @@ public class ColeccionJuegos {
 	 * @version 1.0
 	 * 09-11-2022
 	 */
-	public void nuevojuego(Juego juego) {
-		//daba un error
-		//services.ColeccionJuegos.CrearJuego(juego);
+	public boolean addJuego(Juego juego) {
+		try {
+			return coleccionServices.CrearJuego(juego);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	//Le pide al CSV que cargue los datos iniciales
 	public boolean cargarDatosIniciales() {
-		coleccionServices.addLista( csv.cargaInicialdeDatos() );
-		
-		return false;
+		return coleccionServices.addLista( csv.cargaInicialdeDatos() );
 	}
 	
 
