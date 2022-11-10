@@ -68,6 +68,14 @@ public class Junit {
 		assertEquals(cantidadEsperada, listaJuegosCargadosDeCSV.size());
 	}
 	
+	@Test
+	public void testingPrimerElementoDelCSV() {
+		data.CSV csv = new data.CSV();
+		ArrayList<Juego> listaJuegosCargadosDeCSV = csv.buildGameCollectionFromCSVFile("vgsales.csv");
+		
+		assertEquals(listaJuegosCargadosDeCSV.get(0).getAnnosalida(), 2006);
+	}
+	
 	
 	public boolean correccion(String ruta) {
 		try {

@@ -1,13 +1,10 @@
 package data;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import model.Generos;
 import model.Juego;
-import model.Plataformas;
 
 /**
  * addLista / Coge una lista de juegos y los añade todos. Devuelve false o true según si se produjo un error o no.
@@ -50,11 +47,11 @@ public class ColeccionJuegos {
     @Override
 	public String toString() {
     	String string = new String();
-    	String string2 = "\n";
     	for (Integer  key : coleccion.keySet()) {
     		Juego juegoListando = new Juego();
     		juegoListando = coleccion.get(key);
-    		string+=juegoListando.toString()+string2;
+    		string+=juegoListando.toString();
+    		string+="\n";
     	}
 		return string;
 	}

@@ -2,8 +2,8 @@ package control;
 import utils.Entrada;
 
 import java.util.List;
-import java.util.Map;
-
+import model.Plataformas;
+import model.Generos;
 import model.Juego;
 
 
@@ -31,7 +31,7 @@ public class ColeccionJuegos {
 
 
 	public void menu () {
-		boolean continuar = false; //posibilidad de salir del loop
+		boolean continuar = true; //posibilidad de salir del loop
 		do {	
 		int opcion=0; //la opcion que se elije
 		System.out.println("Presiona 1 para hacer una carga incial de juegos");
@@ -45,7 +45,7 @@ public class ColeccionJuegos {
 			opcion2();
 		}
 		if (opcion==3) {
-	    System.out.print(opcion3(coleccionServices.getColeccion()));
+			opcion3();
 		}
 		
 		//otras opciones
@@ -74,15 +74,25 @@ public class ColeccionJuegos {
 		cargarDatosIniciales();
 	 }
 	 
-	 public Juego opcion2(data.ColeccionJuegos coleccion, int idnumber) {
-		 Map<Integer, Juego> coleccioncompleta = coleccion.getColeccion();
-		 Juego juegoaAñadir = coleccioncompleta.get(idnumber);
-		 return juegoaAñadir;
+	 public void opcion2() {
+		 System.out.println("Numero de identificacion: ");
+		 int rank = Entrada.entradaInt();
+		 System.out.println("Nombre del juego: ");
+		 String nombre = Entrada.entradaString();
+		 System.out.println("Año de salida: ");
+		 int annoSalida = Entrada.entradaInt();
+		 System.out.println("Publisher: ");
+		 String publisher = Entrada.entradaString();
+		 System.out.println("Plataforma: ");
+		 Plataformas plataforma = Juego.getPlataforma(Entrada.entradaString());
+		 System.out.println("Genero: ");
+		 Generos genero = Juego.getGenero(Entrada.entradaString());
+		 Juego nuevojuego = new Juego(rank, nombre, plataforma, annoSalida, genero, publisher);
+		 coleccionServices.CrearJuego(nuevojuego);
 	 }
 	 
-	 public String opcion3(data.ColeccionJuegos coleccion) {
-		 Map<Integer, Juego> coleccioncompleta = coleccion.getColeccion();
-		return coleccioncompleta.toString();
+	 public void opcion3() {
+		coleccionServices.ListarJuegos();
 	 }
 	 
 	public boolean addLista(List<Juego> lista){
