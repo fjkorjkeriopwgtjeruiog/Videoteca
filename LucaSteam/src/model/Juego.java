@@ -49,10 +49,6 @@ public class Juego {
 		this.publisher = publisher;
 	}
 	
-	private void crearJuego() {
-		
-    }
-	
 	public String toString() {
 		return "Juego [rank=" + rank + ", nombre=" + nombre + ", plataforma="
 				+ plataforma + ", annosalida=" + annosalida + ", genero="
