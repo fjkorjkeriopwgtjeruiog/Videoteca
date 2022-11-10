@@ -1,4 +1,5 @@
 package data;
+import services.CSV;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -94,14 +95,14 @@ public class ColeccionJuegos {
     }
 
     // Pendiente entender mejor su función.
-    public boolean addListaDatos(List<Juego> lista){
-    	try{
-    		for(Juego j: lista)
-        		j.guardar("lista"+j.getRank()+".txt");
+    public boolean addListaDatos(List<Juego> lista,services.ColeccionJuegos p){
+    	for(Juego j: lista) {
+    		try{
+				p.CrearJuego(j);
+			}catch (Exception e){
+				return false;
+			}
     	}
-    	catch (Exception e){
-			return false;
-		}
     	return true;
     }
 }
