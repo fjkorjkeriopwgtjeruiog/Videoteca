@@ -21,10 +21,14 @@ import model.Juego;
  */
 
 public class ColeccionJuegos {
-
+	control.CSV csv;
+	services.ColeccionJuegos coleccionServices;
+	public ColeccionJuegos(){
+		csv=new control.CSV();
+		coleccionServices=new services.ColeccionJuegos();
+	}
 	
-	public static void menu () 
-	{
+	public void menu () {
 		boolean continuar = false; //posibilidad de salir del loop
 		do {	
 		boolean opcion1activa= false;
@@ -33,12 +37,7 @@ public class ColeccionJuegos {
 		opcion = Entrada.entradaInt();
 		if (opcion==1) {
 			opcion1();
-			//Hola, soy Martin. He cambiado el funcionamiento del CSV por recomendacion de Antonio 
-			//y por tanto esto tambien tiene que cambiar.
-			//Hay que tener un objeto de tipo CSV, y el metodo cargaInicialDeDatos lo que hace
-			//es devolver el HashMap<Integer,Juego> que habrá que añadir luego a ColeccionJuegos cuando se pueda
-			
-		   
+			opcion1activa= true;
 		}
 		
 		//otras opciones
@@ -46,28 +45,28 @@ public class ColeccionJuegos {
 		} while (continuar);
 	}
 
-	
-	public static void nuevojuego(Juego juego) 
-	{
-		services.ColeccionJuegos.CrearJuego(juego);
+
+	public boolean addJuego(Juego juego) {
+		try {
+			return coleccionServices.CrearJuego(juego);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
+	
+	//Le pide al CSV que cargue los datos iniciales
+	public boolean cargarDatosIniciales() {
+		return coleccionServices.addLista( csv.cargaInicialdeDatos() );
+	}
+	
 
 	
-	 public static void opcion1() 
-	 {
-		cargaInicialdeDatos(){};
-
+	 public void opcion1() {
+		cargarDatosIniciales();
 	 }
 
 	public boolean addLista(List<Juego> lista){
-    	int l=coleccion.size()+1;
-    	for(Juego j: lista) {
-    		try{
-				CrearJuego(l,j);
-			}catch (Exception e){
-				return false;
-			}
-    	}
-    	return true;
+    	return coleccionServices.addLista(lista);
     }
 }

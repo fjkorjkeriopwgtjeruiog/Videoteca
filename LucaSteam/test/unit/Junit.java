@@ -1,7 +1,9 @@
 package unit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import java.util.HashMap;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
+
+import java.util.ArrayList;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,17 +14,11 @@ import model.Juego;
 import utils.Logging;
 import data.ColeccionJuegos;
 
-/**
- * correccion(String ruta) / Comprueba que los datos de un fichero estén correctos.
- * @author  Daniel
- * @version 1.0
- * 09-11-2022
- */
 
 /**
- * incluir(ColeccionJuegos c,Juego j) / Prueba unitaria en la que añadimos un juego a una lista y revisamos que haya salido bien.
+ * Junit / Pruebas unitarias 
  * @author  Daniel
- * @version 1.0
+ * @version 1.2
  * 10-11-2022
  */
 
@@ -65,10 +61,10 @@ public class Junit {
 		final int cantidadEsperada = 16598; //aunque el rank vaya de 1 a 16600, hay dos que faltan de por medio
 		
 		data.CSV csv = new data.CSV();
-		HashMap<Integer,Juego> mapaJuegosCargadosDeCSV = csv.buildGameCollectionFromCSVFile("vgsales.csv");
+		ArrayList<Juego> listaJuegosCargadosDeCSV = csv.buildGameCollectionFromCSVFile("vgsales.csv");
 		
 		
-		assertEquals(cantidadEsperada, mapaJuegosCargadosDeCSV.size());
+		assertEquals(cantidadEsperada, listaJuegosCargadosDeCSV.size());
 	}
 	
 	public boolean correccion(String ruta) {

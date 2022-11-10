@@ -35,7 +35,7 @@ public class Juego {
 	private int annosalida;
 	private Generos genero;
 	private String publisher;
-	private Juego() {
+	public Juego() {
 		super();
 	}
 	public Juego(int rank, String nombre, Plataformas plataforma, int annosalida,
