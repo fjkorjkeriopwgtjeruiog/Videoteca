@@ -2,6 +2,7 @@ package data;
 
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import model.Juego;
@@ -72,5 +73,15 @@ public class ColeccionJuegos {
 
     }
     
-    
+    public boolean addLista(List<Juego> lista){
+    	int l=coleccion.size()+1;
+    	for(Juego j: lista) {
+    		try {
+				CrearJuego(l,j);
+			} catch (Exception e) {
+				return false;
+			}
+    	}
+    	return true;
+    }
 }
