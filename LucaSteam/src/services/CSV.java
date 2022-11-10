@@ -1,5 +1,5 @@
 package services;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 import model.Juego;
 /**
@@ -16,7 +16,7 @@ public class CSV {
 		
 	}
 	
-	public HashMap<Integer, Juego>  cargaInicialdeDatos() {
+	public ArrayList<Juego>  cargaInicialdeDatos() {
 		return csvDataManager.buildGameCollectionFromCSVFile("vgsales.csv");
 	}
 }

@@ -1,5 +1,5 @@
 package control;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 import model.Juego;
 
@@ -13,7 +13,7 @@ import model.Juego;
 
 public class CSV {
 	services.CSV csvServiceManager;
-	public HashMap<Integer, Juego> cargaInicialdeDatos(){
+	public ArrayList<Juego> cargaInicialdeDatos(){
 		return csvServiceManager.cargaInicialdeDatos();
 	}
 	

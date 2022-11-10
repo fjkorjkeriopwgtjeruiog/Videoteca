@@ -14,6 +14,7 @@ import utils.Entrada;
 
 public class ColeccionJuegos {
 	control.CSV csv;
+	services.ColeccionJuegos coleccionServices;
 	/**
 	 * ColeccionJuegos / Saca el menu principal
 	 * @author  Ivan
@@ -57,7 +58,7 @@ public class ColeccionJuegos {
 	
 	//Le pide al CSV que cargue los datos iniciales
 	public boolean cargarDatosIniciales() {
-		csv.cargaInicialdeDatos();
+		coleccionServices.addLista( csv.cargaInicialdeDatos() );
 		
 		return false;
 	}

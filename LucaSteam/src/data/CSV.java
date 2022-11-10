@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.ArrayList;
 
 /**
  * CSV / Carga los datos iniciales a partir de un archivo CSV
@@ -18,9 +18,8 @@ import java.util.HashMap;
  */
 
 public class CSV {
-	public HashMap<Integer, Juego> buildGameCollectionFromCSVFile(String filepath) {
-		HashMap<Integer, Juego> coleccionObtenida = new HashMap<Integer, Juego>();
-		int nextIDForMap = 0;
+	public ArrayList<Juego> buildGameCollectionFromCSVFile(String filepath) {
+		ArrayList<Juego> coleccionObtenida = new ArrayList<Juego>();
 		
 		try {
 			FileReader filereader = new FileReader(new File(filepath));
@@ -44,7 +43,7 @@ public class CSV {
 				String publisher = filaDelArchivoCSV[5];
 				
 				Juego juego = new Juego(rank, nombre, plataforma, annosalida, genero, publisher);
-				coleccionObtenida.put(nextIDForMap++, juego);
+				coleccionObtenida.add(juego);
 				
 				//System.out.println(juego);
 				

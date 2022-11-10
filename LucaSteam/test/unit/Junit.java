@@ -3,6 +3,7 @@ package unit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -52,9 +53,13 @@ public class Junit {
 		final int cantidadEsperada = 16598; //aunque el rank vaya de 1 a 16600, hay dos que faltan de por medio
 		
 		data.CSV csv = new data.CSV();
-		HashMap<Integer,Juego> mapaJuegosCargadosDeCSV = csv.buildGameCollectionFromCSVFile("vgsales.csv");
+		ArrayList<Juego> listaJuegosCargadosDeCSV = csv.buildGameCollectionFromCSVFile("vgsales.csv");
 		
 		
-		assertEquals(cantidadEsperada, mapaJuegosCargadosDeCSV.size());
+		assertEquals(cantidadEsperada, listaJuegosCargadosDeCSV.size());
+	}
+	
+	public void testingListarTodosLosJuegos() {
+		Juego juego1=new Juego();
 	}
 }
