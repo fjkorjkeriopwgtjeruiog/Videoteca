@@ -84,12 +84,24 @@ public class ColeccionJuegos {
     public boolean addLista(List<Juego> lista){
     	int l=coleccion.size()+1;
     	for(Juego j: lista) {
-    		try {
+    		try{
 				CrearJuego(l,j);
-			} catch (Exception e) {
+			}catch (Exception e){
 				return false;
 			}
     	}
+    	return true;
+    }
+
+    // Pendiente entender mejor su función.
+    public boolean addListaDatos(List<Juego> lista){
+    	try{
+    		for(Juego j: lista)
+        		j.guardar("lista"+j.getRank()+".txt");
+    	}
+    	catch (Exception e){
+			return false;
+		}
     	return true;
     }
 }
