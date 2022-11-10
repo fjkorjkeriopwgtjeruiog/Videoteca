@@ -49,10 +49,6 @@ public class Juego {
 		this.publisher = publisher;
 	}
 	
-	private void crearJuego() {
-		
-    }
-	
 	public String toString() {
 		return "Juego [rank=" + rank + ", nombre=" + nombre + ", plataforma="
 				+ plataforma + ", annosalida=" + annosalida + ", genero="
@@ -125,7 +121,7 @@ public class Juego {
 		}
 	}
 		
-	public Juego copiar(Juego j) {
+	public Juego copiar(Juego j){
 		return new Juego(j.rank,j.nombre,j.plataforma,j.annosalida,j.genero,j.publisher);
 	}
 }

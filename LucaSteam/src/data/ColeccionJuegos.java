@@ -5,7 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import model.Generos;
 import model.Juego;
+import model.Plataformas;
 
 /**
  * addLista / Coge una lista de juegos y los añade todos. Devuelve false o true según si se produjo un error o no.
@@ -30,6 +32,34 @@ import model.Juego;
 
 /**
  * sigloxx / Muestra los juegos creados en el siglo XX.
+ * @author  Daniel
+ * @version 1.0
+ * 10-11-2022
+ */
+
+/**
+ * publicadora / Muestra los juegos creados por una determinada publicadora.
+ * @author  Daniel
+ * @version 1.0
+ * 10-11-2022
+ */
+
+/**
+ * anno / Muestra los juegos creados en un determinado año.
+ * @author  Daniel
+ * @version 1.0
+ * 10-11-2022
+ */
+
+/**
+ * genero / Muestra los juegos de un determinado genero de jugabilidad.
+ * @author  Daniel
+ * @version 1.0
+ * 10-11-2022
+ */
+
+/**
+ * plataforma / Muestra los juegos creados para una determinada consola.
  * @author  Daniel
  * @version 1.0
  * 10-11-2022
@@ -141,5 +171,55 @@ public class ColeccionJuegos {
 			}
     	}
     	return true;
+    }
+
+    public ArrayList<Juego> publicadora(String pub){
+    	ArrayList<Juego> nin=new ArrayList<>();
+    	int l=coleccion.size();
+    	for(int a=0; a<l; a++)
+    		if(coleccion.get(a).getPublisher()==pub)
+    			nin.add(coleccion.get(a));
+    	return nin;
+    }
+    
+    public ArrayList<Juego> anno(int ann){
+    	ArrayList<Juego> nin=new ArrayList<>();
+    	int l=coleccion.size();
+    	for(int a=0; a<l; a++)
+    		if(coleccion.get(a).getAnnosalida()==ann)
+    			nin.add(coleccion.get(a));
+    	return nin;
+    }
+    
+    public ArrayList<Juego> plataforma(String p){
+    	ArrayList<Juego> nin=new ArrayList<>();
+    	Plataformas j;
+    	try{
+    		j=Plataformas.valueOf(p);
+    	}
+    	catch(Exception e){
+    		return nin;
+    	}
+    	int l=coleccion.size();
+    	for(int a=0; a<l; a++)
+    		if(coleccion.get(a).getPlataforma()==j)
+    			nin.add(coleccion.get(a));
+    	return nin;
+    }
+    
+    public ArrayList<Juego> genero(String g){
+    	ArrayList<Juego> nin=new ArrayList<>();
+    	Generos u;
+    	try {
+    		u=Generos.valueOf(g);
+    	}
+    	catch(Exception e) {
+    		return nin;
+    	}
+    	int l=coleccion.size();
+    	for(int a=0; a<l; a++)
+    		if(coleccion.get(a).getGenero()==u)
+    			nin.add(coleccion.get(a));
+    	return nin;
     }
 }
