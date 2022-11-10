@@ -50,9 +50,13 @@ public class ColeccionJuegos {
 	 * @version 1.0
 	 * 09-11-2022
 	 */
-	public static void nuevojuego(Juego juego) {
-		services.ColeccionJuegos.CrearJuego(juego);
+	public void nuevojuego(Juego juego) {
+		//daba un error
+		//services.ColeccionJuegos.CrearJuego(juego);
 	}
+	
+	
+	
 
 
 }
