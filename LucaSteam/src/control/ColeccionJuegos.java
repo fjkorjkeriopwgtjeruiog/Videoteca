@@ -1,5 +1,8 @@
 package control;
 import utils.Entrada;
+
+import java.util.List;
+
 import model.Juego;
 
 import model.Juego;
@@ -8,6 +11,13 @@ import utils.Entrada;
 /**
  * ColeccionJuegos 
  * @author  Ivan
+ * @version 1.0
+ * 09-11-2022
+ */
+
+/**
+ * addLista / Coge una lista de juegos y los añade todos. Devuelve false o true según si se produjo un error o no.
+ * @author  Daniel
  * @version 1.0
  * 09-11-2022
  */
@@ -55,4 +65,15 @@ public class ColeccionJuegos {
 	}
 
 
+	public boolean addLista(List<Juego> lista){
+    	int l=coleccion.size()+1;
+    	for(Juego j: lista) {
+    		try{
+				CrearJuego(l,j);
+			}catch (Exception e){
+				return false;
+			}
+    	}
+    	return true;
+    }
 }
