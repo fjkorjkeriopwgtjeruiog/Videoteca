@@ -11,7 +11,7 @@ import model.Juego;
  * 09-11-2022
  */
 
-public class ColeccionJuegos {
+public class ColeccionJuegos{
 
 	private data.ColeccionJuegos coleccion = new data.ColeccionJuegos();
 	
