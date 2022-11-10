@@ -15,6 +15,13 @@ import model.Juego;
  * 09-11-2022
  */
 
+/**
+ * addListaDatos / Interactua con el ColeccionJuegos de la carpeta services.
+ * @author  Daniel
+ * @version 1.0
+ * 09-11-2022
+ */
+
 public class ColeccionJuegos {
 
 	private Map<Integer, Juego> coleccion;
@@ -94,7 +101,6 @@ public class ColeccionJuegos {
     	return true;
     }
 
-    // Pendiente entender mejor su función.
     public boolean addListaDatos(List<Juego> lista,services.ColeccionJuegos p){
     	for(Juego j: lista) {
     		try{
