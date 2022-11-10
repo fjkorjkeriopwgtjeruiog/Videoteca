@@ -25,10 +25,9 @@ public class ColeccionJuegos{
     }
     
     public boolean addLista(List<Juego> lista){
-    	int l=coleccion.size()+1;
     	for(Juego j: lista) {
     		try{
-				CrearJuego(l,j);
+				CrearJuego(j);
 			}catch (Exception e){
 				return false;
 			}
